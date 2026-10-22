@@ -2,7 +2,7 @@
 
 > Tôi viết lại từ ghi chú làm việc của chính dự án. "Tôi" là chủ dự án, "Claude" là trợ lý AI lập trình (Claude Code) làm việc cùng tôi. Tôi quyết định hướng đi và đặt tiêu chuẩn "xong"; Claude đo, viết code, chạy test và ghi tài liệu. Chỗ nào ghi chú không nói rõ ai nghĩ ra ý tưởng, tôi không nhận thêm công ở đó.
 >
-> Mục đích: cho thấy cách chúng tôi phát hiện và sửa sai, không phải một dự án chưa từng sai.
+> Mục đích: cho thấy cách chúng tôi phát hiện và sửa sai, không phải một dự án chưa từng sai. Các con số lấy từ ghi chú đo lúc đó; điều tôi nhớ và đứng sau là *nhầm mục đích gì* và *nên thiết kế ra sao*.
 
 ## Mục lục nhanh
 | # | Lỗi thiết kế | Cách phát hiện | Điều tôi rút ra |

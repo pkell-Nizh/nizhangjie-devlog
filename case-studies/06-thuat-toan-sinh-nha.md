@@ -1,5 +1,12 @@
 # Case study 06 — Sinh bố cục nhà nhiều tầng: thử, hoàn tác, và viết lại thuật toán (12–17/09/2026)
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Vá heuristic mãi để dọn ô thừa trong bố cục nhà.
+> - **Thiết kế đúng ra sao:** Đổi hẳn cách nghĩ: chia mặt bằng bằng BSP (không có ô thừa theo cấu trúc), tách chia hình học khỏi kết nối lối đi.
+> - **Bài học:** Khi vá mãi không hết thì đổi thuật toán. Hoàn tác là bình thường, lịch sử giữ lại bằng chứng.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Nguồn:** chuỗi 40+ commit git có thật (đây là giai đoạn có lịch sử git đầu tiên) · **Kỹ năng:** thuật toán sinh thủ tục (procedural generation), thử–sai có kỷ luật, tối ưu tổ hợp.
 
 > Tôi chỉ viết điều **đọc được trong lịch sử commit và ảnh chụp**; chi tiết cài đặt nằm trong code (không đưa vào repo này).

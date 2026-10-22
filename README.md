@@ -83,6 +83,7 @@ images/          ← prototype/ worldgen/ lighting/ fluids/ city/ ui/ timeline/
 ## Trung thực về giới hạn
 - Đây **không phải** một game đã phát hành; một số hệ còn "nợ" và được ghi rõ (ví dụ: RAM chưa phân rã, chi phí dựng ô địa hình +28%, một số lỗi "đường nứt" chưa tái hiện).
 - Không có ảnh chụp trước 03/08 và không có commit git trước 12/09 — các mốc đó dựa vào ngày sửa tài liệu và ghi chú.
+- Mỗi case study mở đầu bằng "Tóm lược 3 dòng" (nhầm mục đích gì, thiết kế đúng ra sao, bài học). Các con số chi tiết bên dưới lấy từ ghi chú đo lúc đó.
 - Tài liệu trong `docs/lessons` là **ghi chú làm việc gốc**, giữ nguyên tiếng Việt và văn phong thô để thấy quá trình thật.
 
 ## Công cụ

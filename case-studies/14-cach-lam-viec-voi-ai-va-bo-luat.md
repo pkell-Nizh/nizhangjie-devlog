@@ -1,5 +1,12 @@
 # Case study 14 — Cách tôi làm việc cùng AI: bộ luật, bộ nhớ dự án và kỷ luật "xong = chơi được"
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Coi "test xanh" là đã xong.
+> - **Thiết kế đúng ra sao:** "Xong" = người chơi chạm được; luật dự án gắn với bug thật; ghi chú để làm việc qua nhiều phiên và hai tài khoản.
+> - **Bài học:** Nói rõ vai trò của AI và của mình; báo cáo trung thực những gì chưa chắc.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Nói thẳng:** dự án được xây bằng cách **cộng tác với AI lập trình (Claude Code; trước đó còn một công cụ AI khác)**. Phần tôi làm: chọn hướng, chốt đánh đổi, đặt tiêu chuẩn "xong", đọc số đo, và quyết định đổi hướng khi thấy đi sai. Phần Claude làm: viết và viết lại code, chạy test, đo, ghi tài liệu. Tôi viết điều này vì nhà tuyển dụng nên biết *quy trình thật*, không phải một bức tranh "tự làm hết".
 
 ## 1) Bộ luật dự án — mỗi luật gắn với một bug thật

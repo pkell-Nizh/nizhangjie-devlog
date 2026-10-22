@@ -1,5 +1,12 @@
 # Case study 05 — Tách "lõi mô phỏng" khỏi "nội dung tu tiên" (M37) và biến nó thành luật có test
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Coi dự án là "game tu tiên" nên lớp Disciple bị khoá cứng vào mọi hệ.
+> - **Thiết kế đúng ra sao:** Lõi mô phỏng nhận thân xác tổng quát; tu tiên là dịch vụ cắm vào, có phép thử "gỡ ra vẫn chạy".
+> - **Bài học:** Hệ mới nhận kiểu tổng quát, không nhận kiểu của nội dung. Refactor lớn bằng kế thừa để không vỡ code cũ.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Thời gian:** 15/08/2026 (M37), được củng cố 28–30/09 · **Kỹ năng:** refactor kiến trúc lớn an toàn, đo quy mô trước khi làm, giữ tương thích ngược.
 
 ## Vấn đề

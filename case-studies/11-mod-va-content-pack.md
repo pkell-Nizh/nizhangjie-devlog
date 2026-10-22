@@ -1,5 +1,12 @@
 # Case study 11 — Kiến trúc mod: "dữ liệu JSON ⟂ hook C#", loại bỏ Lua, và chứng minh bằng cách tách 3 gói nội dung ra khỏi lõi
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Nghĩ mod cần ngôn ngữ script (Lua) và phải trực ban hỗ trợ.
+> - **Thiết kế đúng ra sao:** Hai tầng cam kết: dữ liệu JSON ổn định, móc C# không hứa; chứng minh bằng việc tách ba gói nội dung khỏi lõi.
+> - **Bài học:** Mức cam kết khác nhau cho từng tầng giữ mod mở mà không phải trực ban.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Thời gian:** quyết định 07/09/2026; hiện thực 26/09 → 03/10 · **Kỹ năng:** thiết kế kiến trúc mở rộng, phân tích chi phí bảo trì, ranh giới module có test.
 
 ## Bối cảnh ràng buộc

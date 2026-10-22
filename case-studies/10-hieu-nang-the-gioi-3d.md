@@ -1,5 +1,12 @@
 # Case study 10 — Hiệu năng thế giới 3D: từ "FPS trung bình ổn" đến "hết giật cục" (14–18/10/2026)
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Tin rằng FPS trung bình ổn là xong.
+> - **Thiết kế đúng ra sao:** Đo giật cục (đuôi phân phối), chia việc theo ngân sách thời gian, đo trước khi quyết có tách luồng sim không.
+> - **Bài học:** Nhìn p95/p99, ép tải, đo xong mới quyết (kết quả: chưa cần tách cả sim).
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Kỹ năng:** Unity Profiler (ProfilerRecorder, hierarchy view), phân tích đuôi phân phối, GC, luồng nền, ngân sách thời gian theo khung, quy trình đo có kiểm soát.
 
 > Mọi số liệu dưới đây lấy từ ghi chú đo lúc làm; điều kiện (Editor, cửa sổ 1100×500, thành phố, 9–25 ô world) ghi trong tài liệu gốc.

@@ -1,5 +1,12 @@
 # Case study 13 — Độ tin cậy: lưu trữ công trình, Unity treo 11 GB RAM, và đo RAM bản build
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Tưởng map "trông như cũ" nghĩa là dữ liệu còn nguyên; lưu game ghi bản cũ.
+> - **Thiết kế đúng ra sao:** Lưu snapshot và khôi phục trước khi dựng pathfinder; chụp ô đang sống trước khi ghi.
+> - **Bài học:** Trạng thái mới phải được hỏi: "có sống qua save/load không?"; ghi rõ cái chưa phủ.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 ## A. Công trình biến mất khi quay lại ô (M61, 28/08/2026)
 **Lỗ hổng:** `WildSceneBootstrap.Generate()` tái sinh `LocalMapData` hoàn toàn mới mỗi lần vào lại một ô → mọi building/tường/kho/trạm người chơi dựng *biến mất im lặng*. Địa hình tất định theo seed nên *trông như map cũ*; chỉ nhà là mất thật. Tôi hỏi thẳng "cái gì là lỗ hổng cơ" rồi chốt vá.
 

@@ -1,5 +1,12 @@
 # Case study 07 — Từ bản đồ 2D thành thế giới khối kiểu Minecraft: chunk, ánh sáng, chất lỏng, khối có hình
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Giữ hai thế giới (2D và khối) lệ thuộc nhau; thử gộp mặt khi ánh sáng bị nướng vào đỉnh.
+> - **Thiết kế đúng ra sao:** 2D và 3D là hai bản vẽ của cùng dữ liệu; chuyển ánh sáng sang shader và texture 3D sau khi đo.
+> - **Bài học:** Đo trước khi chọn kỹ thuật, và ghi rõ giá phải trả của mỗi lựa chọn.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Thời gian:** 08/10 → 15/10/2026 (≈ 60 commit) · **Kỹ năng:** voxel engine, mesh/shader, cấu trúc dữ liệu, đánh đổi hiệu năng có số đo.
 
 ## Lộ trình

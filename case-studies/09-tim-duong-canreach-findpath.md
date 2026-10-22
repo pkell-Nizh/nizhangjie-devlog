@@ -1,5 +1,12 @@
 # Case study 09 — "Tới được" nhưng "không tìm được đường": truy lỗi tìm đường 3D (17/10/2026)
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Nghi hệ region "nói dối" khi tới-được nhưng không có đường.
+> - **Thiết kế đúng ra sao:** Region đúng; lỗi ở A* chạm trần và ở công trình chặn đường. Sửa heuristic, phần còn lại ghi là câu hỏi thiết kế mở.
+> - **Bài học:** Bác bỏ giả thuyết bằng số đo; làm tìm đường không chặn luồng chính.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Kỹ năng:** gỡ lỗi hệ thống tìm đường phân tầng (region → corridor → A*), thiết kế phép đo công bằng, giả thuyết bị bác bỏ.
 
 ## Triệu chứng

@@ -1,5 +1,12 @@
 # Case study 12 — Trồng trọt: thiết kế tổng quát trước, rồi 6 bước = 6 commit (23/10/2026)
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Định dựng một hệ trồng trọt mới.
+> - **Thiết kế đúng ra sao:** Thiết kế tổng quát trước, rồi mở rộng khung có sẵn (khối có nấc, random tick, registry) theo 6 bước.
+> - **Bài học:** Mỗi bước một commit có test; thiết kế bằng văn bản trước khi code.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Kỹ năng:** thiết kế hệ thống data-driven, mở rộng khung có sẵn thay vì viết hệ mới, chia việc thành bước kiểm chứng được.
 
 ## Yêu cầu

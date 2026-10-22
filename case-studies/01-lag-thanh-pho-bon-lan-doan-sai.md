@@ -1,5 +1,12 @@
 # Case study 01 — "Lag giờ đi làm": 4 lần đoán sai, 1 lần đo đúng (713 ms → 3,26 ms)
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Tưởng lag giờ đi làm là do tìm đường, nên sửa pathfinding bốn vòng liên tiếp.
+> - **Thiết kế đúng ra sao:** Đo Profiler trước. Thủ phạm là một hệ khác (quét toàn scene trong vòng lặp lồng), không phải tìm đường.
+> - **Bài học:** Triệu chứng là dữ liệu, không phải chẩn đoán. Đưa một hệ sang quy mô lớn hơn thì rà lại mọi giả định "ít nên chấp nhận được".
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Thời gian:** 08/08/2026 · **Phạm vi:** thành phố ~874 dân (C#/Unity) · **Kết quả:** khung hình chính **713 ms → 3,26 ms** (~219 lần), 0 khung > 100 ms.
 
 > **TL;DR (EN):** The city simulation lagged badly at "commute hour". We spent four rounds optimising pathfinding based on reading code — each helped a little, none found the real cause. When I finally profiled, 97% of the AI cost was a different system (a full-scene `FindObjectsByType` inside a nested loop). Lesson: *a user's symptom is data, not a diagnosis — measure first.*

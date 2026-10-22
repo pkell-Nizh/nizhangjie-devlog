@@ -1,5 +1,12 @@
 # Case study 04 — Hệ lời thoại cho NPC: lặp lời 33,1% → 0,0%, và cái giá của "một trục lọc"
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Thêm trục lọc cho lời thoại phong phú hơn, và hardcode đại từ ở hai bảng khác nhau.
+> - **Thiết kế đúng ra sao:** Giải đại từ một lần theo quan hệ; chống lặp bằng luật tất định; không dùng LLM lúc chạy.
+> - **Bài học:** Mỗi trục lọc là một khoản nợ nội dung; "đủ tốt" phải định nghĩa được thành một bài test.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Thời gian:** 20–21/08/2026 (M45, M48–M54) · **Kỹ năng:** thiết kế hệ thống nội dung, đo chất lượng bằng test, tiếng Việt/NLP nhẹ.
 
 ## Mục tiêu

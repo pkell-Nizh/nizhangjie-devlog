@@ -1,5 +1,12 @@
 # Case study 02 — Một dòng cấu hình: 2,8 → 92,6 FPS (và 27 → 280 FPS)
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Để chế độ vẽ mỗi ô một draw call mà không có lý do nào được ghi lại.
+> - **Thiết kế đúng ra sao:** Gộp theo chunk (16×16 vì Wild sửa ô liên tục), quyết định sau khi đo A/B.
+> - **Bài học:** Hỏi "chế độ mặc định này có lý do không?"; kiểm tra rào cản có thật không rồi mới nêu.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Thời gian:** 01/08/2026 · **Kỹ năng:** đo A/B, profiling đồ hoạ 2D (Unity URP) · **Kết quả:** 367.899 → 70 draw call.
 
 ## Vấn đề

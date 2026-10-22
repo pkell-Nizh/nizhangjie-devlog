@@ -1,5 +1,12 @@
 # Case study 03 — Sự cố prefab dùng chung và quyết định "hợp nhất có chủ đích"
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Giả định ngầm "pawn chỉ sống ở Wild" nên prefab dùng chung bị đè lẫn nhau.
+> - **Thiết kế đúng ra sao:** Wild và City bản chất là một, chỉ khác bộ nạp dữ liệu. Hợp nhất phần không có lý do kỹ thuật để khác, giữ tách phần khác biệt thật.
+> - **Bài học:** Trước khi hợp nhất, hỏi: "khác biệt này có lý do kỹ thuật thật không?"
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Thời gian:** 27/08/2026 · **Kỹ năng:** xử lý sự cố, phân tích kiến trúc, phục hồi khi không có bản sao lưu.
 
 ## Sự cố

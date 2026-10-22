@@ -1,5 +1,12 @@
 # Case study 08 — Viết lại bộ sinh địa hình cho thế giới 3D liền (19–21/10/2026)
 
+> **Tóm lược 3 dòng**
+> - **Nhầm mục đích:** Tưởng "cột đá vô tri" do hàm độ cao, và coi biome là nhãn dán 2D.
+> - **Thiết kế đúng ra sao:** Biome và địa hình đều là hàm theo toạ độ; điêu khắc giới hạn theo đất lân cận.
+> - **Bài học:** Đo khối thật trong Play Mode thay vì mô phỏng bên ngoài; ghi rõ nợ còn lại.
+>
+> *Các con số bên dưới lấy từ ghi chú đo lúc đó, không phải thứ cần thuộc lòng.*
+
 **Kỹ năng:** sinh thủ tục (noise, spline, mật độ 3D), Burst, kiểm chứng bằng đo trong Play Mode, ra quyết định thiết kế cùng một trợ lý AI.
 
 ## Bối cảnh và quyết định
