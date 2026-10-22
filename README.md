@@ -2,6 +2,20 @@
 
 > **EN summary.** A solo-developer Unity/C# project built from **26 May to 23 Oct 2026**: a simulation engine (colony-sim + Minecraft-style voxel world + creature collecting) whose content is fully moddable through JSON data and C# hooks. I built it together with an AI coding assistant (Claude Code): I decided the goals, the design trade-offs and what "done" means; Claude measured, wrote code, ran tests and kept notes. This repository is **not the source code**. It is the **process**: plans, measurements, mistakes, fixes, decisions and screenshots. Start with [DESIGN_MISTAKES](DESIGN_MISTAKES.md), the [case studies](#case-studies) or the [timeline](TIMELINE.md).
 
+![Thế giới khối liền: bờ biển, rừng, hồ](images/prototype/12_the_gioi_lien_toan_canh.png)
+
+| | |
+|---|---|
+| ![Sông trong hẻm núi tuyết](images/worldgen/trong_game_song_hem.png) | ![Hồ trong địa hình 3D](images/worldgen/trong_game_ho_tuong_nuoc_da_sua.png) |
+| ![Túi đồ kiểu Minecraft, góc nhìn thứ nhất](images/prototype/17_pov_inventory_cursor.png) | ![Màn hình chính](images/ui/title_main3.png) |
+
+*Từ trái sang phải, trên xuống: thế giới khối liền · sông trong hẻm núi · hồ · túi đồ góc nhìn thứ nhất · màn hình chính. Toàn bộ là ảnh chụp từ game đang chạy.*
+
+## Chơi như thế nào (giới thiệu nhanh)
+Người chơi bước vào một thế giới làm bằng khối, giống Minecraft: đào, xây, bơi, đi qua hang, sông, hồ và núi. Thế giới có thành phố với cư dân tự sinh sống: họ đi làm, kết bạn, nói chuyện và nhớ những chuyện đã xảy ra giữa hai bên. Người chơi có thể nhìn game như một bản đồ quản lý khu định cư (kiểu RimWorld) hoặc đi bộ ở góc nhìn thứ nhất, thu phục sinh vật hoang dã và đánh theo lượt, trồng trọt, chế tạo đồ.
+
+Điều khiến dự án này khác một game thông thường: **phần lõi là một engine mô phỏng**, còn tu tiên, sưu tập sinh vật hay bất kỳ chủ đề nào khác chỉ là gói nội dung cắm thêm bằng file dữ liệu.
+
 ## Đây là gì
 Game kết hợp **quản lý khu định cư** (kiểu RimWorld), **thế giới khối** (kiểu Minecraft/Hytale), **thu phục sinh vật** (kiểu Pokémon) và **tu tiên**. Mục tiêu thật của dự án: *một engine mô phỏng thế giới* mà nội dung nào cũng cắm vào được (tu tiên, Pokémon, Tensura… đều chỉ là "mod").
 
