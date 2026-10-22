@@ -36,10 +36,12 @@ Mỗi bài có cấu trúc: bối cảnh → vấn đề → giả thuyết/th�
 | 13 | [Độ tin cậy: lưu công trình, Unity treo, RAM](case-studies/13-do-tin-cay-luu-tru-va-su-co.md) | bug lưu "bản cũ" tự tìm ra |
 | 14 | [Cách làm việc với AI & bộ luật](case-studies/14-cach-lam-viec-voi-ai-va-bo-luat.md) | "xong = chơi được"; hai tài khoản, bộ nhớ dự án |
 
+> 🧩 **Muốn xem cách mình phát hiện và sửa lỗi thiết kế?** Đọc [`DESIGN_MISTAKES.md`](DESIGN_MISTAKES.md): 18 lần thiết kế sai, ai phát hiện, sửa thế nào, bài học gì.
+
 ## Nếu bạn chỉ có 5 phút
 1. Đọc [case 01](case-studies/01-lag-thanh-pho-bon-lan-doan-sai.md) (sửa sai và đo).
 2. Đọc [case 08](case-studies/08-sinh-dia-hinh-3d.md) và xem ảnh cũ-vs-mới.
-3. Đọc [case 14](case-studies/14-cach-lam-viec-voi-ai-va-bo-luat.md) (quy trình thật, nói thẳng về vai trò của AI).
+3. Đọc [DESIGN_MISTAKES](DESIGN_MISTAKES.md) rồi [case 14](case-studies/14-cach-lam-viec-voi-ai-va-bo-luat.md) (quy trình thật, nói thẳng về vai trò của AI).
 
 ## Cách mình làm việc
 1. **Thiết kế bằng văn bản trước** → [`docs/`](docs) (trồng trọt, thời tiết, nhiệt độ, combat framework, shop, sự cố thế giới, kiểm toán spaghetti).
