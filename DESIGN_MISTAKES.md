@@ -31,7 +31,7 @@
 ## 1. Bốn vòng tối ưu nhầm hệ (08/08)
 Thành phố giật vào giờ đi làm. Tôi và Claude đọc code, cùng kết luận thủ phạm là pathfinding, rồi sửa bốn vòng liên tiếp: né nội thất, cache đường đi, thu hẹp đồ thị, đa luồng. Vòng nào cũng giảm lag một chút, nhưng vẫn còn lag.
 
-Đến đó tôi quyết định dừng đoán và đo Profiler. Kết quả lật ngược giả thuyết: 97% chi phí AI nằm ở một hàm không liên quan, quét toàn scene trong vòng lặp lồng (77 ms mỗi lần gọi). Sửa đúng chỗ, khung hình chính từ **713 ms xuống 3,26 ms**.
+Ở vòng 4, Claude đã gợi ý đo trước, nhưng tôi muốn làm đa luồng luôn; đến vòng 5 tôi mới chịu dừng đoán và đo Profiler. Kết quả lật ngược giả thuyết: 97% chi phí AI nằm ở một hàm không liên quan, quét toàn scene trong vòng lặp lồng (77 ms mỗi lần gọi). Sửa đúng chỗ, khung hình chính từ **713 ms xuống 3,26 ms**.
 
 Trong chuỗi này, ý "thu hẹp đồ thị tìm đường tận gốc" (2369 → 590 region) là của tôi, và nó vẫn đáng giữ dù không phải thủ phạm chính. **Điều tôi rút ra:** triệu chứng người chơi mô tả là dữ liệu, không phải chẩn đoán. → [case 01](case-studies/01-lag-thanh-pho-bon-lan-doan-sai.md)
 
