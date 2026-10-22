@@ -50,6 +50,8 @@ Mỗi bài có cấu trúc: bối cảnh → vấn đề → giả thuyết/th�
 | 13 | [Độ tin cậy: lưu công trình, Unity treo, RAM](case-studies/13-do-tin-cay-luu-tru-va-su-co.md) | bug lưu "bản cũ" tự tìm ra |
 | 14 | [Cách làm việc với AI & bộ luật](case-studies/14-cach-lam-viec-voi-ai-va-bo-luat.md) | "xong = chơi được"; hai tài khoản, bộ nhớ dự án |
 
+> 📚 **Bốn chủ đề lớn có mục lục riêng** (chiến lược ra mắt · hạ tầng dữ liệu · DOTS và 3D · modding): xem [`topics/`](topics/README.md).
+
 > 🧩 **Muốn xem chúng tôi phát hiện và sửa lỗi thiết kế thế nào?** Đọc [`DESIGN_MISTAKES.md`](DESIGN_MISTAKES.md): nhật ký 18 lần thiết kế sai, ai phát hiện, sửa ra sao, tôi rút ra điều gì.
 
 ## Nếu bạn chỉ có 5 phút
@@ -70,6 +72,7 @@ README.md        ← bạn đang ở đây
 TIMELINE.md      ← toàn bộ hành trình theo giai đoạn (26/05 → 23/10)
 GALLERY.md       ← ảnh chụp có chú thích
 case-studies/    ← 14 bài phân tích chi tiết
+topics/          ← mục lục + 4 bài chủ đề (ra mắt, dữ liệu, DOTS/3D, mod)
 docs/
   early/         ← tài liệu thiết kế tháng 5–6 (Project Bible, M1–M10, UI/UX, bàn giao)
   lessons/       ← ghi chú kỹ thuật gốc (tiếng Việt), 56 file
