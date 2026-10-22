@@ -10,7 +10,7 @@ Claude
 ---
 
 > Tài liệu này = điểm khởi đầu cho phiên làm việc dài. Đọc 5 phút rồi vào việc.
-> Ngày bàn giao: 2026-06-26. Người dùng: buihuuloc2006@gmail.com (comment/doc tiếng Việt, identifier tiếng Anh).
+> Ngày bàn giao: 2026-06-26. Người dùng: (email đã ẩn) (comment/doc tiếng Việt, identifier tiếng Anh).
 
 ---
 
