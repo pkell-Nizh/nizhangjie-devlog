@@ -6,6 +6,8 @@
 Game kết hợp quản lý khu định cư (kiểu RimWorld), thế giới khối (kiểu Minecraft/Hytale), bắt thú (kiểu Pokémon) và tu tiên.
 Mọi nội dung mở rộng được qua **mod dữ liệu JSON + hook C#**.
 
+> 📅 **Muốn xem từ đầu?** Đọc [`TIMELINE.md`](TIMELINE.md): toàn bộ hành trình từ 26/05/2026, từng giai đoạn kèm tài liệu và ảnh.
+
 ## Cách mình làm việc (điều mình muốn nhà tuyển dụng thấy)
 1. **Lập kế hoạch trước, bằng văn bản** → [`docs/`](docs) (mỗi hệ lớn có một file thiết kế: trồng trọt, thời tiết, combat, shop, sự kiện thế giới...).
 2. **Đo trước khi tối ưu** → số liệu Profiler thật (ms/khung, KB GC), không đoán.
@@ -46,6 +48,7 @@ Mọi nội dung mở rộng được qua **mod dữ liệu JSON + hook C#**.
 ## Ảnh chụp
 | Chủ đề | Thư mục |
 |---|---|
+| **Theo ngày** (03/08 → 17/09, tên file chứa ngày giờ chụp) | [`images/timeline`](images/timeline) |
 | Tiến hoá từ prototype 2D → thế giới khối liền (18 ảnh có đánh số theo thứ tự) | [`images/prototype`](images/prototype) |
 | Sinh địa hình 3D, so sánh cũ/mới, sông, hồ, núi, rừng | [`images/worldgen`](images/worldgen) |
 | Hệ ánh sáng khối (đuốc, hang, phòng tối) | [`images/lighting`](images/lighting) |
