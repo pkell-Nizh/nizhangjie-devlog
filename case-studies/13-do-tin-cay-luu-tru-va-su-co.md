@@ -1,7 +1,7 @@
 # Case study 13 — Độ tin cậy: lưu trữ công trình, Unity treo 11 GB RAM, và đo RAM bản build
 
 ## A. Công trình biến mất khi quay lại ô (M61, 28/08/2026)
-**Lỗ hổng:** `WildSceneBootstrap.Generate()` tái sinh `LocalMapData` hoàn toàn mới mỗi lần vào lại một ô → mọi building/tường/kho/trạm người chơi dựng *biến mất im lặng*. Địa hình tất định theo seed nên *trông như map cũ*; chỉ nhà là mất thật. Người dùng hỏi thẳng "cái gì là lỗ hổng cơ" rồi chốt vá.
+**Lỗ hổng:** `WildSceneBootstrap.Generate()` tái sinh `LocalMapData` hoàn toàn mới mỗi lần vào lại một ô → mọi building/tường/kho/trạm người chơi dựng *biến mất im lặng*. Địa hình tất định theo seed nên *trông như map cũ*; chỉ nhà là mất thật. Tôi hỏi thẳng "cái gì là lỗ hổng cơ" rồi chốt vá.
 
 **Thiết kế:** snapshot POCO phẳng (6 loại: BuildPiece, WildBuilding, Storage kèm *nội dung túi*, Workstation kèm *toàn bộ WorkOrder*, Producer kèm lịch, GroundItem vật liệu), dùng *chung công thức khoá ô* với hai sổ đã có (vị trí pawn, giường) — "không đẻ hệ song song". Footprint nén thành *hình chữ nhật origin + w×h* (xác minh bằng đọc code rằng mọi lớp dựng footprint kiểu `for x for y`).
 
@@ -21,7 +21,7 @@
 - Một lỗi đỏ còn lại (TMP `Cull` NRE trong Unity 6) được ghi là *bug Editor đã biết, vô hại*, không đụng.
 
 ## C. RAM bản build (đo 21/10/2026)
-Build Development + Profiler, lấy mẫu `Get-Process` mỗi 5 s: màn hình chính 0,6 GB WS → vào thế giới 2,6 GB WS (5–6 GB private) → sau 2 phút đi 3,3 GB WS / 7,2 GB private. Người dùng treo game 5 giờ thật (~1 tháng 18 ngày trong game): RAM gần như không tăng ⇒ **không rò rỉ theo thời gian mô phỏng**. Chưa thử đi xa liên tục qua nhiều ô. *Chưa phân rã theo nhóm* — ghi là bước tiếp theo (nối Memory Profiler), không giả vờ đã giải xong. Bẫy: `manage_build` qua MCP làm mất kết nối → dùng `BuildPipeline.BuildPlayer` trong `delayCall` rồi chờ file kết quả.
+Build Development + Profiler, lấy mẫu `Get-Process` mỗi 5 s: màn hình chính 0,6 GB WS → vào thế giới 2,6 GB WS (5–6 GB private) → sau 2 phút đi 3,3 GB WS / 7,2 GB private. Tôi treo game 5 giờ thật (~1 tháng 18 ngày trong game): RAM gần như không tăng ⇒ **không rò rỉ theo thời gian mô phỏng**. Chưa thử đi xa liên tục qua nhiều ô. *Chưa phân rã theo nhóm* — ghi là bước tiếp theo (nối Memory Profiler), không giả vờ đã giải xong. Bẫy: `manage_build` qua MCP làm mất kết nối → dùng `BuildPipeline.BuildPlayer` trong `delayCall` rồi chờ file kết quả.
 
 ## Bằng chứng
 [`project_m61_tang3_build_persist.md`](../docs/lessons/project_m61_tang3_build_persist.md) · [`project_editor_open_hang_2026-08-29.md`](../docs/lessons/project_editor_open_hang_2026-08-29.md) · [`project_build_ram_2026-10-21.md`](../docs/lessons/project_build_ram_2026-10-21.md)

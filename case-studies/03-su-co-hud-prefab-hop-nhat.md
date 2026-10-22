@@ -3,13 +3,13 @@
 **Thời gian:** 27/08/2026 · **Kỹ năng:** xử lý sự cố, phân tích kiến trúc, phục hồi khi không có bản sao lưu.
 
 ## Sự cố
-`HUD.prefab` là **một prefab dùng chung** cho hai scene (Wild và City). Người dùng bấm *Apply All* ở City rồi *Revert* ở Wild: Apply đẩy toàn bộ khác biệt của City vào prefab gốc, Revert kéo Wild về khớp đúng file đó → Wild mất sạch phần riêng của nó.
+`HUD.prefab` là **một prefab dùng chung** cho hai scene (Wild và City). Tôi bấm *Apply All* ở City rồi *Revert* ở Wild: Apply đẩy toàn bộ khác biệt của City vào prefab gốc, Revert kéo Wild về khớp đúng file đó → Wild mất sạch phần riêng của nó.
 
 **Không có đường phục hồi tự động:** lúc đó dự án *chưa dùng git*; không OneDrive, không File History, không Shadow Copy (đã kiểm tra hết); Undo của Editor cũng cạn vì chuyển scene xoá stack.
 > Sau sự cố này dự án chuyển sang dùng git (lịch sử commit bắt đầu ngày 12/09).
 
 ## Quyết định thiết kế (phần đáng đọc nhất)
-Thay vì cố dựng lại *y hệt* trạng thái phân kỳ cũ, người dùng chốt: Wild và City bản chất là **một**, chỉ khác bộ nạp dữ liệu — "giống chunk trong Minecraft" — và **giả định cũ "pawn không sống ở City" đã hết hạn**. → sửa **City** cho bắt kịp, không dựng lại Wild cũ.
+Thay vì cố dựng lại *y hệt* trạng thái phân kỳ cũ, tôi chốt: Wild và City bản chất là **một**, chỉ khác bộ nạp dữ liệu — "giống chunk trong Minecraft" — và **giả định cũ "pawn không sống ở City" đã hết hạn**. → sửa **City** cho bắt kịp, không dựng lại Wild cũ.
 
 ### Nguyên tắc rút ra — *không phải thứ gì cũng nên hợp nhất*
 Trong code có một comment ghi rằng dự án đã từng thử dùng chung `WildCursorReadout` cho City rồi **phải tách ra** (kiểu `WildTilemapRenderer` ≠ `CityTilemapRenderer`, field trống lặng câm). Câu hỏi cần hỏi trước khi hợp nhất bất cứ thứ gì hỏng:

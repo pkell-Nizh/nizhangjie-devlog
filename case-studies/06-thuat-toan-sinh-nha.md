@@ -2,7 +2,7 @@
 
 **Nguồn:** chuỗi 40+ commit git có thật (đây là giai đoạn có lịch sử git đầu tiên) · **Kỹ năng:** thuật toán sinh thủ tục (procedural generation), thử–sai có kỷ luật, tối ưu tổ hợp.
 
-> Mình chỉ viết điều **đọc được trong lịch sử commit và ảnh chụp**; chi tiết cài đặt nằm trong code (không đưa vào repo này).
+> Tôi chỉ viết điều **đọc được trong lịch sử commit và ảnh chụp**; chi tiết cài đặt nằm trong code (không đưa vào repo này).
 
 ## Bài toán
 Sinh nhà nhiều tầng cho cư dân thành phố: nhiều người/hộ, mỗi người một phòng ngủ, có bếp-ăn, phòng tắm, thang bộ; cửa chỉ nối các phòng hợp lý (phòng riêng chỉ thông với phòng khách/sảnh); mặt bằng không để lại ô thừa vô nghĩa. Song song là migration toàn engine `Vector2Int → Vector3Int` (12/09) để hỗ trợ nhiều tầng.

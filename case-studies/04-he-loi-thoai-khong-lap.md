@@ -38,7 +38,7 @@ Tiếng Anh chỉ có "you" nên phải diễn đạt quan hệ bằng *nội du
 ## "Đủ tốt" được định nghĩa thành test
 > Nói chuyện với cùng một pawn **10 lần liên tiếp**: không câu nào lặp, và ít nhất 3 lần nhắc tới sự việc có thật trong ký ức.
 
-Vế đầu đạt (0/2700). Vế sau phụ thuộc độ phủ nội dung — mình ghi rõ là *chưa đạt hết*.
+Vế đầu đạt (0/2700). Vế sau phụ thuộc độ phủ nội dung — chúng tôi ghi rõ là *chưa đạt hết*.
 
 ## Điểm dừng được đặt trước
 > "Nếu tới bước ghép mảnh mà thấy 144 câu mặt đọc dở hơn 16 câu viết tay thì **dừng ở (2)** — đó là kết cục hợp lệ, không phải thất bại."

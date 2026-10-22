@@ -10,7 +10,7 @@
 
 ## Nguyên nhân thật (hai loại)
 1. **80 cặp:** đường thật rất vòng (ví dụ thẳng 42 ô, đường 2431 bước quanh đồi) → A* hành lang 3D chạm trần số nút (30.000). Mục cũ trong hàng đợi vẫn được "mở" và ăn trần.
-2. **7 cặp (+4 sau sửa lộ ra):** ô có `Cell.Occupant` là *công trình* — A* coi là chắn (trừ đích) còn region bỏ qua occupancy → lệch. Bỏ qua occupancy thì 11/11 có đường. → **câu hỏi thiết kế còn mở** (không phải bug thuần): công trình nên chặn trong PathGrid hay không. Mình *không tự quyết*, ghi lại.
+2. **7 cặp (+4 sau sửa lộ ra):** ô có `Cell.Occupant` là *công trình* — A* coi là chắn (trừ đích) còn region bỏ qua occupancy → lệch. Bỏ qua occupancy thì 11/11 có đường. → **câu hỏi thiết kế còn mở** (không phải bug thuần): công trình nên chặn trong PathGrid hay không. Chúng tôi *không tự quyết*, ghi lại.
 
 ## Sửa (commit 63e34077)
 Heuristic = max(octile, **khoảng cách đồ thị region tới region đích**); bỏ qua nút đã đóng; phá hoà theo `h`; trần = max(30000, 2 × số chỗ đứng hành lang). Đường octile/Burst giữ thứ tự cũ. **Lệch 87 → 11 (toàn Occupant).** Thêm test `LongDetour_*` — *đỏ trên code cũ* (chứng minh test thật sự bắt được bug).
@@ -27,7 +27,7 @@ Một báo cáo "đi bộ vẫn khựng" dẫn tới chuỗi sửa:
 - **"Tới được" dựng dần:** BFS hai chiều chạy tiếp được; `CanReach` đồng bộ chỉ còn cho chuyến ngoại ô. Tệ nhất 6,4 ms.
 - **Quái không chặn luồng chính:** A* cấp ô chạy trên ThreadPool, chỉ giao yêu cầu mới nhất; quái giữ đường cũ khi chờ. `Beast.PathStep` max 2,1 ms (trước 20–35).
 - **Dân trong nhà** (commit 77ca34fb): 25 → 7 ms.
-- **Mình đã đo lại để khỏi phỏng đoán:** 22 chỗ gọi `CanReach` đồng bộ trong các `JobGiver_*`: đo thật (150 s, 4 pawn) cho **0 lần loang BFS** → *không cần* đổi hợp đồng JobGiver (một việc lớn mình định làm). Chỉ chuyến ngoại ô của dân thành đắt (max 11,9 ms).
+- **Claude đo lại để khỏi phỏng đoán:** 22 chỗ gọi `CanReach` đồng bộ trong các `JobGiver_*`: đo thật (150 s, 4 pawn) cho **0 lần loang BFS** → *không cần* đổi hợp đồng JobGiver (một việc lớn chúng tôi định làm). Chỉ chuyến ngoại ô của dân thành đắt (max 11,9 ms).
 - Một chi tiết trung thực: con số 6,7 ms của `Beast.PathStep` trong Profiler hoá ra **do Profiler thổi phồng**; log tạm cho thấy 110 s chỉ 6 lần vượt ngân sách (0,6–1,6 ms).
 
 ## Bằng chứng

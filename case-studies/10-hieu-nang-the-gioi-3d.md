@@ -48,7 +48,7 @@ Cùng đợt: BFS tới-được hai chiều (27 → 8 ms), `RecomputeBlock` (12
 ## Quy trình đo (đáng giá hơn từng con số)
 - Nhìn **p95/p99/max/số khung vượt ngưỡng**, không nhìn trung bình.
 - `Application.runInBackground = true` *sau* domain reload; `profileEditor = false`; xoá khung → bật → ForceCell trong cùng lệnh; đọc sau ~5 s (bộ đệm 2000 khung trôi nhanh).
-- Remote desktop của người dùng làm chờ GPU 5–33 ms/khung → **không so FPS tuyệt đối với số cũ**.
+- Remote desktop của tôi làm chờ GPU 5–33 ms/khung → **không so FPS tuyệt đối với số cũ**.
 - Lần đầu một ô có thành thường là JIT vài ms — đừng tin số chạy lạnh.
 - Mọi thay đổi để lại **ProfilerMarker** rẻ (`VW.*`, `SW.*`, `VGV.*`, `PRG.*`, `RP.*`, `Beast.*`, `Clock.<Lớp>.<Hàm>`).
 

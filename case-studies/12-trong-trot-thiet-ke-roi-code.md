@@ -13,7 +13,7 @@
 - **Đất = khối có `soil`** (tag + độ phì + độ ẩm); cây khai *tag* thay vì id; cuốc `core:till`, phân bón `core:fertilize`.
 - **AI:** `JobGiver_GrowPlant` làm trọn vòng (hái → gieo → cuốc); gỡ dữ liệu `feat_crop_*` trùng từ thời 2D.
 
-## Bốn câu hỏi người dùng chốt (§11)
+## Bốn câu hỏi tôi chốt (§11)
 1. Chunk ngoài tầm: bù tăng trưởng khi nạp lại, **trần 10 ngày**.
 2. Cuốc hay không do từng loài tự khai (tag đất).
 3. Lõi chỉ dừng lớn; **héo chết để pack tự khai** (giữ lõi trung tính).

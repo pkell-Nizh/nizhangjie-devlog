@@ -1,11 +1,11 @@
 # Case study 08 — Viết lại bộ sinh địa hình cho thế giới 3D liền (19–21/10/2026)
 
-**Kỹ năng:** sinh thủ tục (noise, spline, mật độ 3D), Burst, kiểm chứng bằng đo trong Play Mode, ra quyết định cùng người dùng.
+**Kỹ năng:** sinh thủ tục (noise, spline, mật độ 3D), Burst, kiểm chứng bằng đo trong Play Mode, ra quyết định thiết kế cùng một trợ lý AI.
 
 ## Bối cảnh và quyết định
 Bộ sinh cũ là của game 2D: núi = ô "Mountain" thành tường cao 3–7 khối; độ cao đắp sau; bản build thật vẫn chạy bộ sinh 2D một ô 200² vì công tắc thế giới liền chỉ bật trong Editor.
 
-**Quyết định người dùng chốt (không diễn giải lại):**
+**Quyết định tôi chốt (không diễn giải lại):**
 - Trục đứng **không giới hạn về kiến trúc**, nhưng khung *sinh* cố định Y 0..512; sửa 70 chỗ dùng cứng `BlockLayers.Count = 256`.
 - Sông chảy thật từ mạng sông của world (rộng dần, hạ mặt nước theo dốc, cắt núi thành hẻm).
 - Hình địa hình: world + **spline kiểu MC 1.18** + hồ sơ từng biome bằng **JSON kiểu Hytale**, trộn liền mép.
@@ -15,7 +15,7 @@ Bộ sinh cũ là của game 2D: núi = ô "Mountain" thành tường cao 3–7 
 Bỏ trần 256 lớp → hàm độ cao 3D + cửa sổ xem trước → **chạy hàm độ cao trong Burst, giống C# từng bit** → dời gốc về mực biển 160, lát nén 4 bit → "game feel" (núi thấp hơn, đồng bằng lượn, bậc thềm) → **sông và hồ thật** → cây giãn tán → biến đổi theo vùng (đồng phẳng để xây vs gồ ghề) → cửa sổ editor bản đồ → bỏ viền biển → uốn toạ độ + trục đỉnh–thung → **điêu khắc mật độ 3D** (nhô/trụ) → biome theo khối → khí hậu từ noise thuần → hang nhiều loại.
 
 ## Một bug được truy đúng nguyên nhân: "cột đá vô tri"
-- Người dùng báo (20/10): nhiều cột đá/cỏ vô nghĩa.
+- Tôi báo (20/10): nhiều cột đá/cỏ vô nghĩa.
 - Giả thuyết "hàm độ cao lỗi" → đo trong Play Mode: **không phải**.
 - Nguyên nhân thật: điêu khắc 3D khoét 5–7 khối quanh một điểm, mặt đất gốc đứng lại thành cột phủ cỏ — **34/37** cột là cột như vậy, mọc thêm chỉ 3/37. Biên độ điêu khắc (~14×1,6 khối) ≫ độ dốc mặt đất.
 - **Bẫy khi đo:** lần đầu đếm ra 525 "cột"/ô, thật ra là *cây*. Phải loại khối thân/lá khỏi phép đo. Mô phỏng ngoài game *không bắt được* — phải xem khối thật.

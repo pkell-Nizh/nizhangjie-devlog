@@ -1,6 +1,6 @@
 # Thư viện ảnh chụp (có chú thích)
 
-> Ảnh chụp trực tiếp từ game/Editor trong lúc làm. Chú thích mình chỉ viết cho những ảnh mình đã xem trực tiếp; các ảnh còn lại ghi theo tên file. Ảnh `timeline/` có ngày giờ chụp trong tên file (`screenshot-YYYYMMDD-HHMMSS`).
+> Ảnh chụp trực tiếp từ game/Editor trong lúc làm. Chú thích chỉ viết cho những ảnh đã được xem trực tiếp khi soạn; các ảnh còn lại ghi theo tên file. Ảnh `timeline/` có ngày giờ chụp trong tên file (`screenshot-YYYYMMDD-HHMMSS`).
 
 ## images/prototype
 

@@ -26,7 +26,7 @@
 
 ## Giai đoạn 3 — Hệ Pawn/Job kiểu RimWorld (11/07 → 31/07) 🟡
 - **11–16/07** [masterplan Pawn](docs/lessons/project_pawn_system_masterplan.md) (lệnh chỉ định, WorkGiver, lịch, thu hoạch, xây, khuân vác), [AI não ThinkTree/JobGiver](docs/lessons/project_pawn_ai_brain.md), [Job Pipeline (JobDriver/Toil)](docs/lessons/project_job_pipeline.md).
-- **24–25/07** M18–M21 (kéo thả, trạng thái, nhàn rỗi, phản ứng đe doạ, trồng cây). Quy trình: *code → kiểm Play Mode → người dùng xác nhận* (ngày xác nhận 14/08 được ghi).
+- **24–25/07** M18–M21 (kéo thả, trạng thái, nhàn rỗi, phản ứng đe doạ, trồng cây). Quy trình: *code → kiểm Play Mode → tôi xác nhận* (ngày xác nhận 14/08 được ghi).
 - **28/07** ngày/đêm; đồng hồ toàn cục (test xanh); vòng đời tài nguyên. **30/07** M26 sản xuất, M27 thời khoá biểu, bảng token UI.
 
 ## Giai đoạn 4 — Thành phố sống & hiệu năng 2D (01/08 → 12/08) 🟢 (có ảnh từ 03/08)
@@ -58,7 +58,7 @@
 - **21–25/09** 🟢 **thế giới liền (seamless)**: cửa sổ sector, cư dân theo thành, spawn quái runtime; sửa khựng 430 ms qua ranh; sửa bản đồ đen; biên giới biome hữu cơ; vòng đời rừng.
 - **26–27/09** 🟢 cư dân vĩnh viễn + đi giữa các thành; bắt thú trong trận; Field Codex; huấn luyện viên NPC; kế hoạch ngày theo dữ liệu; thám hiểm nhiều ngày.
 - **28–30/09** 🟢 **tách nội dung ra mod** (`pokemon`, `xianxia`, `tensura`) — [case 11](case-studies/11-mod-va-content-pack.md). 29/09 avatar di chuyển liên tục (WASD); nạp WorldMap bằng Addressables.
-- **01–05/10** 🟢 A* cấp ô của dân thành chạy thành **Burst job cho đường đi y hệt**; lõi noise sinh địa hình chạy Burst; bạn bè & hộ gia đình cho cư dân; **định dạng bản vẽ công trình chung + xưởng vẽ ngay trong game** (người dùng chốt: "chỉ khi để bản thân vào người dùng mới biết cái gì tốt nhất").
+- **01–05/10** 🟢 A* cấp ô của dân thành chạy thành **Burst job cho đường đi y hệt**; lõi noise sinh địa hình chạy Burst; bạn bè & hộ gia đình cho cư dân; **định dạng bản vẽ công trình chung + xưởng vẽ ngay trong game** (tôi chốt: "chỉ khi ta để bản thân vào người dùng, ta mới biết cái gì là tốt nhất").
 
 ## Giai đoạn 8 — Thế giới khối kiểu Minecraft (08/10 → 18/10) 🟢
 - **08–12/10** prototype voxel → vẽ *game thật* bằng khối → chuột/POV/túi đồ, 2D và 3D là hai bộ vẽ của cùng dữ liệu. Ảnh: [`images/prototype`](images/prototype) (18 ảnh theo thứ tự).

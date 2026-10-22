@@ -2,7 +2,7 @@
 
 **Thời gian:** 08/08/2026 · **Phạm vi:** thành phố ~874 dân (C#/Unity) · **Kết quả:** khung hình chính **713 ms → 3,26 ms** (~219 lần), 0 khung > 100 ms.
 
-> **TL;DR (EN):** The city simulation lagged badly at "commute hour". I spent four rounds optimising pathfinding based on reading code — each helped a little, none found the real cause. When I finally profiled, 97% of the AI cost was a different system (a full-scene `FindObjectsByType` inside a nested loop). Lesson: *a user's symptom is data, not a diagnosis — measure first.*
+> **TL;DR (EN):** The city simulation lagged badly at "commute hour". We spent four rounds optimising pathfinding based on reading code — each helped a little, none found the real cause. When I finally profiled, 97% of the AI cost was a different system (a full-scene `FindObjectsByType` inside a nested loop). Lesson: *a user's symptom is data, not a diagnosis — measure first.*
 
 ## Bối cảnh
 Thành phố có ~874 dân. Đến 7–10 giờ trong game (giờ NPC đi làm) game giật nặng. Người chơi mô tả: "giật kiểu lạ, như frame chỉ nhích khi một pathfinding vừa sinh ra". Triệu chứng nghe **rất giống** pathfinding.
@@ -22,11 +22,11 @@ Thành phố có ~874 dân. Đến 7–10 giờ trong game (giờ NPC đi làm) 
 ### Vòng 3 — Chẩn đoán lại bằng cách đọc chính code vừa sửa
 - Phát hiện nhánh fallback chạy **A\* không trần trên 160.000 ô** — một lần gọi treo cả khung, và `avoidPrivateInterior` còn đẩy thêm chuyến vào nhánh đó.
 - Sửa 3a: trần cứng 6000 nút. **Tự bắt bug phát sinh:** kết quả null do bị cắt ngang bị cache hiểu là "vĩnh viễn không có đường" → sẽ nhốt NPC trong nhà mãi. Sửa: chỉ cache đường *thành công*.
-- Sửa 3b (ý của người dùng, mạnh hơn mọi sửa trước): thu hẹp *đồ thị* thay vì lọc sau — dân thường chỉ đi trên ô Road nên dựng một đồ thị road-only thứ hai: **2369 → 590 region (nhỏ hơn ~4 lần)**.
-- Kết quả người dùng báo: "bớt lag hơn, nhưng vẫn lag."
+- Sửa 3b (ý của tôi, mạnh hơn mọi sửa trước): thu hẹp *đồ thị* thay vì lọc sau — dân thường chỉ đi trên ô Road nên dựng một đồ thị road-only thứ hai: **2369 → 590 region (nhỏ hơn ~4 lần)**.
+- Kết quả tôi báo: "bớt lag hơn, nhưng vẫn lag."
 
 ### Vòng 4 — Đa luồng pathfinding
-- Người dùng hỏi "mình có đang multithread pathfinding không?" → không, và đó là quy ước cũ có chủ đích. Mình đề xuất đo Profiler trước; người dùng chọn làm đa luồng luôn.
+- Tôi hỏi Claude "mình có đang multithread pathfinding không?" → không, và đó là quy ước cũ có chủ đích. Claude đề xuất đo Profiler trước; tôi vẫn chọn làm đa luồng luôn.
 - Thiết kế chia hai pha để tránh data race: `PrepareQuery` (chỉ main thread, làm mọi thao tác **ghi** như dựng lại region, ghi cache) và `ExecutePreparedQuery` (luồng nào cũng được, chỉ **đọc**).
 
 ### Vòng 5 — Cuối cùng cũng đo Profiler
@@ -47,12 +47,12 @@ Kết quả **lật ngược** 4 vòng trước:
 **Vì sao chỉ City mới chết:** code gốc viết cho map Wild (vài chục công trình) và ghi rõ trong comment "quét trực tiếp, pawn ít nên chấp nhận được". Khi đưa hệ AI sang City, có **6906 món nội thất** → giả định "ít" sai ~100×.
 
 ## Điều học được
-- **Triệu chứng người dùng mô tả là dữ liệu, không phải chẩn đoán.** Bốn vòng tối ưu "nghe hợp lý" đều là cải thiện thật (người dùng xác nhận bớt lag) nhưng sai hệ.
+- **Triệu chứng tôi mô tả là dữ liệu, không phải chẩn đoán.** Bốn vòng tối ưu "nghe hợp lý" đều là cải thiện thật (tôi xác nhận bớt lag) nhưng sai hệ.
 - **Nhìn đuôi phân phối** (p99, max, số khung vượt ngưỡng) — trung bình 2,68 ms vẫn có 20 khung > 100 ms.
 - **Ép tải mới lộ lỗi:** ở tốc độ 1× game 373 FPS, tua 8× chỉ còn 1,4 FPS.
 - **Khi đưa hệ sang quy mô lớn hơn ~100×, rà lại mọi chỗ ghi "chấp nhận được vì ít".**
 - **Bẫy của chính phép đo:** MCP biên dịch C# trên main thread (200 ms–2,3 s) → nếu bộ lấy mẫu còn chạy lúc đó, phép đo tự tạo ra đỉnh nó báo cáo (đã dính: max 1198 ms trong khi p95 chỉ 3,96 ms). Unity cũng không tick khi cửa sổ mất focus (`runInBackground`).
-- **Biết dừng:** đo lại 09/10 (1000 dân): `CityNpc.SlowTick` 3,9 ms/lần, p95 5,4. Người dùng quyết định *không* tối ưu thêm vì chưa phải nợ kỹ thuật — ghi lại để không ai đề xuất lại vô ích.
+- **Biết dừng:** đo lại 09/10 (1000 dân): `CityNpc.SlowTick` 3,9 ms/lần, p95 5,4. Tôi quyết định *không* tối ưu thêm vì chưa phải nợ kỹ thuật — ghi lại để không ai đề xuất lại vô ích.
 
 ## Bằng chứng
 - Ghi chú gốc (đủ 5 vòng + đo lại): [`docs/lessons/project_city_commute_perf.md`](../docs/lessons/project_city_commute_perf.md)

@@ -1,11 +1,11 @@
 # Nizhangjie — nhật ký thiết kế & kỹ thuật của một game sandbox 3D (Unity / C#)
 
-> **EN summary.** A solo-developer Unity/C# project built from **26 May to 23 Oct 2026**: a simulation engine (colony-sim + Minecraft-style voxel world + creature collecting) whose content is fully moddable through JSON data and C# hooks. It was built by **directing an AI coding assistant (Claude Code)** — I set the goals, made design trade-offs, defined "done", read the measurements and rejected wrong turns. This repository is **not the source code**. It is the **process**: plans, measurements, mistakes, fixes, decisions and screenshots. Start with the [case studies](#case-studies) or the [timeline](TIMELINE.md).
+> **EN summary.** A solo-developer Unity/C# project built from **26 May to 23 Oct 2026**: a simulation engine (colony-sim + Minecraft-style voxel world + creature collecting) whose content is fully moddable through JSON data and C# hooks. I built it together with an AI coding assistant (Claude Code): I decided the goals, the design trade-offs and what "done" means; Claude measured, wrote code, ran tests and kept notes. This repository is **not the source code**. It is the **process**: plans, measurements, mistakes, fixes, decisions and screenshots. Start with [DESIGN_MISTAKES](DESIGN_MISTAKES.md), the [case studies](#case-studies) or the [timeline](TIMELINE.md).
 
 ## Đây là gì
 Game kết hợp **quản lý khu định cư** (kiểu RimWorld), **thế giới khối** (kiểu Minecraft/Hytale), **thu phục sinh vật** (kiểu Pokémon) và **tu tiên**. Mục tiêu thật của dự án: *một engine mô phỏng thế giới* mà nội dung nào cũng cắm vào được (tu tiên, Pokémon, Tensura… đều chỉ là "mod").
 
-Repo này dành cho người muốn biết **mình nghĩ và làm việc như thế nào**: lập kế hoạch ra sao, khi sai thì đã sửa thế nào, vì sao chọn phương án này thay vì phương án kia, và kết quả là gì — kèm bằng chứng (số đo, test, commit, ảnh chụp).
+Đây là nhật ký của dự án, tôi viết cho người muốn biết **tôi nghĩ và làm việc như thế nào**: tôi lập kế hoạch ra sao, khi sai thì chúng tôi sửa thế nào, vì sao tôi chọn phương án này thay vì phương án kia, và kết quả là gì — kèm bằng chứng (số đo, test, commit, ảnh chụp). Tôi làm dự án cùng Claude (trợ lý AI lập trình): tôi quyết định hướng đi và tiêu chuẩn "xong", Claude đo, viết code, chạy test và ghi tài liệu.
 
 ## Con số tóm tắt
 | | |
@@ -36,14 +36,14 @@ Mỗi bài có cấu trúc: bối cảnh → vấn đề → giả thuyết/th�
 | 13 | [Độ tin cậy: lưu công trình, Unity treo, RAM](case-studies/13-do-tin-cay-luu-tru-va-su-co.md) | bug lưu "bản cũ" tự tìm ra |
 | 14 | [Cách làm việc với AI & bộ luật](case-studies/14-cach-lam-viec-voi-ai-va-bo-luat.md) | "xong = chơi được"; hai tài khoản, bộ nhớ dự án |
 
-> 🧩 **Muốn xem cách mình phát hiện và sửa lỗi thiết kế?** Đọc [`DESIGN_MISTAKES.md`](DESIGN_MISTAKES.md): 18 lần thiết kế sai, ai phát hiện, sửa thế nào, bài học gì.
+> 🧩 **Muốn xem chúng tôi phát hiện và sửa lỗi thiết kế thế nào?** Đọc [`DESIGN_MISTAKES.md`](DESIGN_MISTAKES.md): nhật ký 18 lần thiết kế sai, ai phát hiện, sửa ra sao, tôi rút ra điều gì.
 
 ## Nếu bạn chỉ có 5 phút
 1. Đọc [case 01](case-studies/01-lag-thanh-pho-bon-lan-doan-sai.md) (sửa sai và đo).
 2. Đọc [case 08](case-studies/08-sinh-dia-hinh-3d.md) và xem ảnh cũ-vs-mới.
 3. Đọc [DESIGN_MISTAKES](DESIGN_MISTAKES.md) rồi [case 14](case-studies/14-cach-lam-viec-voi-ai-va-bo-luat.md) (quy trình thật, nói thẳng về vai trò của AI).
 
-## Cách mình làm việc
+## Cách tôi làm việc
 1. **Thiết kế bằng văn bản trước** → [`docs/`](docs) (trồng trọt, thời tiết, nhiệt độ, combat framework, shop, sự cố thế giới, kiểm toán spaghetti).
 2. **Đo trước khi tối ưu**, nhìn đuôi phân phối (p95/p99/max), ép tải.
 3. **Ghi lại lỗi, cái đã thử mà tệ hơn, và bẫy khi đo** → [`docs/lessons/`](docs/lessons).

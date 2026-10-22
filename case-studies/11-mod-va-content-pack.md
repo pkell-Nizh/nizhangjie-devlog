@@ -30,7 +30,7 @@ JSON def + `namespace:id` + validate + topo-sort **~0** → DSL điều kiện n
 **Điều này chứng minh gì:** khi gỡ nội dung cụ thể (xianxia/Tensura/Pokémon), game lõi vẫn chạy; ba gói nội dung rất khác nhau (tu tiên / slime-naming / sưu tập sinh vật) cùng sống trên một lõi.
 
 ## Một chi tiết trung thực
-Trong ghi chú Tensura có dòng "khi bật lại cần soát: race id so chuỗi thô, `RaceOps` fallback `core:`, `ThoughtRegistry` khoá theo `d.id` thô" — tức mình ghi rõ *nợ còn lại khi bật lại*, thay vì giả vờ cất gọn.
+Trong ghi chú Tensura có dòng "khi bật lại cần soát: race id so chuỗi thô, `RaceOps` fallback `core:`, `ThoughtRegistry` khoá theo `d.id` thô" — tức chúng tôi ghi rõ *nợ còn lại khi bật lại*, thay vì giả vờ cất gọn.
 
 ## Bằng chứng
 [`project_modding_strategy.md`](../docs/lessons/project_modding_strategy.md) · [`project_data_registry.md`](../docs/lessons/project_data_registry.md) · [case study 05](05-tach-loi-khoi-tu-tien.md)

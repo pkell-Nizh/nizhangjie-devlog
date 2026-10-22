@@ -17,7 +17,7 @@ Bản đồ thành phố 400×400 chỉ chạy **2,8 FPS**.
 
 ## Quyết định đáng chú ý
 - **Chunk 16×16 thay vì 32×32 mặc định:** sửa 1 ô là rebuild cả mesh chunk chứa nó; Wild sửa ô liên tục (đánh dấu/xây/thu hoạch) nên chunk nhỏ = rebuild rẻ.
-- **Một rủi ro mình nêu ra hoá ra vô nghĩa:** mình lo vấn đề sắp xếp vẽ (vật cao che pawn) khi dùng Chunk; người dùng chỉ ra dự án *không có vật cao nào*, mọi thứ là ô màu phẳng nhìn từ trên xuống. → **Kiểm tra loại art đó có tồn tại chưa rồi hãy nêu nó như một rào cản.**
+- **Một rủi ro Claude nêu ra hoá ra vô nghĩa:** Claude lo vấn đề sắp xếp vẽ (vật cao che pawn) khi dùng Chunk; tôi chỉ ra dự án *không có vật cao nào*, mọi thứ là ô màu phẳng nhìn từ trên xuống. → **Kiểm tra loại art đó có tồn tại chưa rồi hãy nêu nó như một rào cản.**
 - Phát hiện phụ: scene Wild mặc định mở vào một ô nước sâu → map toàn nước khi mở trực tiếp (không lộ khi vào từ world map). Ghi lại, chưa sửa.
 - Ý tưởng "nóc nhà che nội thất" được đánh giá lại: nó cắt ~⅓ số ô, ở chế độ Individual vẫn ~160k draw call nên không cứu FPS; giá trị thật là **dễ đọc bản đồ**.
 
