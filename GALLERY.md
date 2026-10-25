@@ -1,8 +1,93 @@
 # Thư viện ảnh chụp (có chú thích)
 
+Trang này có hai phần:
+
+1. **[Ảnh mới (25/10/2026)](#ảnh-mới-25102026)**: chụp lại trên bản game hiện tại, cùng các chủ đề với ảnh cũ (địa hình, ánh sáng, thời tiết, giao diện).
+2. **[Ảnh cũ theo quá trình phát triển](#ảnh-cũ-theo-quá-trình-phát-triển)**: giữ nguyên để thấy game đã thay đổi thế nào, từ bản 2D nhìn từ trên xuống tới thế giới khối 3D.
+
+## Ảnh mới (25/10/2026)
+
+> Chụp trong Play Mode, đi đúng đường vào game thật: màn hình chính → tạo thế giới → vào thế giới (seed `20261025`). Ảnh cảnh vật dùng camera tự do của game, chụp sau khi mọi chunk quanh khung hình đã dựng xong. Ảnh nhóm "Ánh sáng, trời và thời tiết" ghi rõ ảnh nào lấy từ đợt chụp 23/10/2026 (cùng bản engine).
+
+### Thế giới và địa hình
+
+**Đồng bằng và đồi** — địa hình sinh theo seed, đồi bậc thang, cây sồi và anh đào, mảng đất bùn ở vùng ẩm.  
+![](images/moi_2026-10-25/the_gioi_dong_bang_doi.jpg)
+
+**Rừng** — cây là khối thật (thân gỗ, lá có lỗ), đập được từng khối.  
+![](images/moi_2026-10-25/the_gioi_rung.jpg)
+
+**Hồ** — mặt nước theo mực của hồ, bờ cát quanh mép.  
+![](images/moi_2026-10-25/the_gioi_ho.jpg)
+
+**Đỉnh núi tuyết** — đỉnh cao khoảng 280 khối trên mực biển, tuyết phủ theo độ cao.  
+![](images/moi_2026-10-25/the_gioi_dinh_nui_tuyet.jpg)
+
+**Núi nhìn từ thung lũng** — vách đá, tầng đất và tuyết đọng trên mặt bằng.  
+![](images/moi_2026-10-25/the_gioi_nui_tu_thung_lung.jpg)
+
+**Bờ biển** — bãi cát chuyển dần sang biển, đảo ở xa. Nhân vật nhỏ ở giữa là Steve (người chơi).  
+![](images/moi_2026-10-25/the_gioi_bo_bien.jpg)
+
+### Ánh sáng, trời và thời tiết
+
+**Hoàng hôn** — màu trời và sương đổi theo giờ trong game.  
+![](images/moi_2026-10-25/troi_hoang_hon.jpg)
+
+**Đêm có sao** — ánh sáng khối tối dần, bầu trời sao.  
+![](images/moi_2026-10-25/troi_dem_sao.jpg)
+
+**Mặt trời vuông kiểu Minecraft** (ảnh 23/10).  
+![](images/moi_2026-10-25/troi_mat_troi_vuong.jpg)
+
+**Nấm phát sáng ban đêm** — khối tự sáng, khai bằng JSON trong mod mẫu `glow_demo` (ảnh 23/10).  
+![](images/moi_2026-10-25/anh_sang_nam_phat_quang.jpg)
+
+**Mưa làm ướt lá** — lá bóng lên, nền sẫm lại khi trời mưa (ảnh 23/10).  
+![](images/moi_2026-10-25/thoi_tiet_mua_uot_la.jpg)
+
+**Tuyết phủ** — mặt đất và tán lá phủ tuyết dạng pixel (ảnh 23/10).  
+![](images/moi_2026-10-25/thoi_tiet_tuyet_phu.jpg)
+
+**F7: nạp lại shader khi đang chơi** — sửa màu và nhịp nhấp nháy trong JSON, bấm F7 là đổi ngay, báo cáo hiện ở đầu màn hình (ảnh 23/10).  
+![](images/moi_2026-10-25/shader_f7_nap_lai_nong.jpg)
+
+**Shift+F7: chế độ soi vật liệu** — đỏ là tự sáng, lục là lay gió, lam là mức ướt (ảnh 23/10).  
+![](images/moi_2026-10-25/shader_che_do_soi.jpg)
+
+### Giao diện kiểu Minecraft
+
+**Màn hình chính**  
+![](images/moi_2026-10-25/ui_man_hinh_chinh.jpg)
+
+**Chọn thế giới** — một thế giới là một save; save kiểu cũ vẫn mở được.  
+![](images/moi_2026-10-25/ui_chon_the_gioi.jpg)
+
+**Tạo thế giới** — tên, seed, tên người chơi, kiểu địa hình.  
+![](images/moi_2026-10-25/ui_tao_the_gioi.jpg)
+
+**HUD góc nhìn thứ nhất** — tim, đùi gà, thanh tinh thần, hotbar 9 ô, bảng đội bên trái; ngắm vào khối thì hiện tên và công cụ cần dùng.  
+![](images/moi_2026-10-25/ui_hud_goc_nhin_thu_nhat.jpg)
+
+**Góc nhìn thứ ba (F5)** — thân Steve dựng bằng khối hộp.  
+![](images/moi_2026-10-25/ui_steve_goc_thu_ba.jpg)
+
+**Túi đồ và chế tạo 2×2** — ô trang bị, túi 27 ô, hotbar là ô thật trong túi, danh sách công thức làm được.  
+![](images/moi_2026-10-25/ui_tui_do_che_tao.jpg)
+
+**Bảng chi tiết sinh vật (pack Pokémon)** — chỉ số dạng lục giác, IV/EV, đội 6 con.  
+![](images/moi_2026-10-25/ui_bang_chi_tiet_pokemon.jpg)
+
+**Menu tạm dừng (Esc)**  
+![](images/moi_2026-10-25/ui_menu_tam_dung.jpg)
+
+---
+
+## Ảnh cũ theo quá trình phát triển
+
 > Ảnh chụp trực tiếp từ game/Editor trong lúc làm. Chú thích chỉ viết cho những ảnh đã được xem trực tiếp khi soạn; các ảnh còn lại ghi theo tên file. Ảnh `timeline/` có ngày giờ chụp trong tên file (`screenshot-YYYYMMDD-HHMMSS`).
 
-## images/prototype
+### images/prototype
 
 **01_thanh_pho_co_mai.png**  
 ![](images/prototype/01_thanh_pho_co_mai.png)
@@ -58,7 +143,7 @@
 **18_pov_chest.png**  
 ![](images/prototype/18_pov_chest.png)
 
-## images/worldgen
+### images/worldgen
 
 **bo_bien.png**  
 ![](images/worldgen/bo_bien.png)
@@ -114,7 +199,7 @@
 **trong_game_song_hem.png** — Sông chảy trong hẻm núi tuyết (địa hình 3D mới, 20/10).  
 ![](images/worldgen/trong_game_song_hem.png)
 
-## images/lighting
+### images/lighting
 
 **light_cave_torch_a.png** — Đuốc trong hang (ánh sáng khối). Ảnh khá tối/ít thông tin — dùng làm bằng chứng cho hệ ánh sáng.  
 ![](images/lighting/light_cave_torch_a.png)
@@ -137,7 +222,7 @@
 **light_torch_room.png**  
 ![](images/lighting/light_torch_room.png)
 
-## images/fluids
+### images/fluids
 
 **fluid_lake.png**  
 ![](images/fluids/fluid_lake.png)
@@ -157,7 +242,7 @@
 **water_flow_1.png**  
 ![](images/fluids/water_flow_1.png)
 
-## images/city
+### images/city
 
 **city_care_center.png**  
 ![](images/city/city_care_center.png)
@@ -186,7 +271,7 @@
 **workshop_farm.png**  
 ![](images/city/workshop_farm.png)
 
-## images/ui
+### images/ui
 
 **bubble_chat.png**  
 ![](images/ui/bubble_chat.png)
@@ -224,10 +309,10 @@
 **ui_restored.png**  
 ![](images/ui/ui_restored.png)
 
-## images/timeline (theo ngày)
+### images/timeline (theo ngày)
 
 
-### 03/08/2026
+#### 03/08/2026
 
 **screenshot-20260803-194424.png** — 03/08: thành phố 2D nhìn từ trên xuống (bản test city_house).  
 ![](images/timeline/screenshot-20260803-194424.png)
@@ -236,7 +321,7 @@
 
 ![](images/timeline/screenshot-20260803-200437.png)
 
-### 04/08/2026
+#### 04/08/2026
 
 
 ![](images/timeline/screenshot-20260804-011237.png)
@@ -247,7 +332,7 @@
 
 ![](images/timeline/screenshot-20260804-024649.png)
 
-### 18/08/2026
+#### 18/08/2026
 
 
 ![](images/timeline/screenshot-20260818-043808.png)
@@ -258,7 +343,7 @@
 
 ![](images/timeline/screenshot-20260818-051031.png)
 
-### 19/08/2026
+#### 19/08/2026
 
 
 ![](images/timeline/screenshot-20260819-014031.png)
@@ -283,7 +368,7 @@
 
 ![](images/timeline/screenshot-20260819-032539.png)
 
-### 20/08/2026
+#### 20/08/2026
 
 
 ![](images/timeline/screenshot-20260820-022026.png)
@@ -314,7 +399,7 @@
 
 ![](images/timeline/screenshot-20260820-134306.png)
 
-### 21/08/2026
+#### 21/08/2026
 
 
 ![](images/timeline/screenshot-20260821-040303.png)
@@ -343,7 +428,7 @@
 
 ![](images/timeline/screenshot-20260821-090630.png)
 
-### 24/08/2026
+#### 24/08/2026
 
 
 ![](images/timeline/screenshot-20260824-202019.png)
@@ -360,7 +445,7 @@
 
 ![](images/timeline/screenshot-20260824-205845.png)
 
-### 30/08/2026
+#### 30/08/2026
 
 
 ![](images/timeline/screenshot-20260830-035309.png)
@@ -377,7 +462,7 @@
 
 ![](images/timeline/screenshot-20260830-035544.png)
 
-### 31/08/2026
+#### 31/08/2026
 
 
 ![](images/timeline/screenshot-20260831-124542.png)
@@ -396,7 +481,7 @@
 
 ![](images/timeline/screenshot-20260831-135623.png)
 
-### 03/09/2026
+#### 03/09/2026
 
 
 ![](images/timeline/screenshot-20260903-133545.png)
@@ -413,7 +498,7 @@
 
 ![](images/timeline/screenshot-20260903-191732.png)
 
-### 10/09/2026
+#### 10/09/2026
 
 
 ![](images/timeline/screenshot-20260910-055356.png)
@@ -438,7 +523,7 @@
 
 ![](images/timeline/screenshot-20260910-154547.png)
 
-### 12/09/2026
+#### 12/09/2026
 
 
 ![](images/timeline/screenshot-20260912-055928.png)
@@ -457,7 +542,7 @@
 
 ![](images/timeline/screenshot-20260912-184443.png)
 
-### 13/09/2026
+#### 13/09/2026
 
 
 ![](images/timeline/screenshot-20260913-005917.png)
@@ -490,7 +575,7 @@
 
 ![](images/timeline/screenshot-20260913-213430.png)
 
-### 14/09/2026
+#### 14/09/2026
 
 
 ![](images/timeline/screenshot-20260914-040651.png)
@@ -507,7 +592,7 @@
 
 ![](images/timeline/screenshot-20260914-220606.png)
 
-### 17/09/2026
+#### 17/09/2026
 
 
 ![](images/timeline/screenshot-20260917-004123.png)
